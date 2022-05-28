@@ -1,0 +1,46 @@
+@import 'libs/normalize';
+@import 'components/all';
+
+
+body {
+ background-size: cover;
+ padding: 0;
+margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.content {
+  padding: 40px 0;
+
+  &__title {
+    margin: 35px 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
