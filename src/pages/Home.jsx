@@ -1,57 +1,37 @@
 import React, { useState } from 'react'
-import SneakersBlock from './SneakersBlock'
-import { useEffect } from 'react';
-import axios from 'axios';
-import AllCategories from './Category';
-import NavBar from './NavBar';
+import FootwareMenus from './Category';
+import Filters from './Filters';
+import {data} from '../data/data'; 
+import SneakersList from '.';
+
+function Home() {
+    const [sneakers, setSneakers] = useState(data);
 
 
-function Home({}) {
-
-    const [sneakers, setSneakers] = useState([]);
-    const [customer, setCustomer] = useState(1);
-
-    useEffect(() => {
-        axios.get('http://localhost:3001/sneakers')
-        .then( resp  => {
-            setSneakers(resp.data);
-            console.log(resp);
+    const filterItem = (event) => {
+        const newItem = data.filter((newVal) => {
+            return newVal.typeSneakers === event; 
         })
-        .catch(err => {
-            console.log(err);
-        })
-      });
-
-
+        setSneakers(newItem);  
+    }
 
   return (
+    <div className="content">
+      <FootwareMenus  />
 
- <div className="content">
-     <AllCategories
-     customer={customer} customerChange={(e) => setCustomer(e)}
-     />
+      <Filters 
+  filterItem={filterItem}  
+  setSneakers = {setSneakers}
+  />
 
-     <div className="container">
-     <div className='Card_container'>
+      <div className="container">
+        <div className="Card_container">
 
-{
-    sneakers.map(obj => (
-
-<SneakersBlock 
-key={obj.id}
- {...obj}
-imageUrl = {obj.imageUrl}
-price = {obj.price}
-/>
-
-
-    ))
-}
-
-</div>
-</div>
+       <SneakersList sneakers={sneakers}/>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Home

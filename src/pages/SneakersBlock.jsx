@@ -6,13 +6,15 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-const SneakersBlock = ({id, name, price, description, imageUrl}) => {
+const SneakersBlock = ({  
+  item: {id, name, price, description, imageUrl, customerType}
+ }) => {
 
 
   return (
-      
-
-        <div className="Card_container">
+    
+        <div className="Card_container" >
+          {customerType}
           <div className="card">
             <img
               className="sneakers__image"

@@ -2,8 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 
 const FootwareMenus = () => {
-
-
     const footwareTypes = [
         {
           id: 1,
@@ -27,7 +25,17 @@ const FootwareMenus = () => {
         },
         {
           id: 5,
-          title: 'Slides',
+          title: 'converse',
+          active: false,
+        },
+        {
+          id: 5,
+          title: 'vance',
+          active: false,
+        },
+        {
+          id: 5,
+          title: 'dr.Martens',
           active: false,
         },
       ];
@@ -39,7 +47,9 @@ const FootwareMenus = () => {
     <div className="store_menu_wrapper">
       <div className="store_menu">
         {footwareTypes.map((type) => (
-          <div key={type.id} className="store_menu_item">
+          <div key={type.id}
+          id = {type.id}
+          className="store_menu_item">
 
             
             <h2 className='store_menu_title'
@@ -59,46 +69,4 @@ const FootwareMenus = () => {
 
 
 
-
-const TabsCategory = () => {
- const [active, setActive] = useState(); 
-
-
-
- return(
-
-
-
-    <div className='tabs_controller'>
-    <div className='container_centered'>
-      <ul className='tab_menus'>
-
-<li>Everyone</li>
-<li>Men</li>
-<li>Women</li>
-<li>Unisex</li>
-<li>Kids</li>
-
-          </ul>
-          </div>
-          </div>
- )
-
-}
-
-const AllCategories = ({customer, customerChange }) => {
-
-    return (
-        <>
-          <FootwareMenus />
-          <TabsCategory
-            customerType={customer}
-            customerTypeChange={customerChange}
-          />
-        </>
-      );
-
-
-}
-
-export default AllCategories
+export default FootwareMenus; 

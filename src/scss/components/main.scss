@@ -26,18 +26,18 @@
 }
 
 .home .content_home p{
-    font-size: 1.7rem;
+    font-size: 36px;
     line-height: 1.1;
     padding:1rem 0;
     color:rgb(62, 62, 62);
     width: 150%;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 
 .buttons {
-    margin: 10%;
-    text-align: center;
+    // margin: 10%;
+    // text-align: center;
 }
 
 .btn-hover {
@@ -46,7 +46,7 @@
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    // margin: 20px;
     height: 55px;
     text-align:center;
     border: none;
