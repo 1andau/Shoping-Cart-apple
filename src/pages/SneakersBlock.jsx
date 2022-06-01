@@ -2,7 +2,6 @@ import React from 'react'
 import Button from './Button';
 import Eye from '../pages/assets/heart.svg'
 import Category from './Category';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 

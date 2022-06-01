@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 
-const FootwareMenus = () => {
+const FootwareMenus = React.memo(function FootwareMenus({}) {
+
     const footwareTypes = [
         {
           id: 1,
@@ -64,8 +65,8 @@ const FootwareMenus = () => {
       </div>
       <div className='fader'></div>
     </div>
-    )
-}
+    ) 
+})
 
 
 

@@ -24,6 +24,8 @@ function Home() {
   setSneakers = {setSneakers}
   />
 
+  
+
       <div className="container">
         <div className="Card_container">
 
