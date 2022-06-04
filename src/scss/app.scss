@@ -1,6 +1,5 @@
 @import './libs/normalize';
 @import './components/all';
-@import './libs//variables';
 
 body {
  background-size: cover;
@@ -14,46 +13,55 @@ margin: 0;
   padding: 40px 0;
 }
 
-.content {
-  padding: 40px 0;
+// =============size
+.sizes {
+  margin: 5px;
+}
+.size-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.size {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  font-size: 11px;
+  border-radius: 50%;
+  margin-right: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: bold;
+} 
 
-  &__title {
-    margin: 35px 0;
-  }
-
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; 
-  }
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.selected-size {
+  background: #1b1920;
+  color: white;
 }
 
-
-
-
-.button {
-  svg {
-    width: 11.5px;
-    height: 11.5px;
-    position: relative;
-  }
-  &:hover,
-  &:active {
-    border-color: darken($color: $purple, $amount: 80);
-    background-color: darken($color: $purple, $amount: 80);
-  }
+.size:hover {
+  border: 1px solid black;
 }
 
+.size:focus {
+  outline: none;
+}
+@media only screen and (max-width: 1000px) {
 
+  .sizes {
+    margin: 0;
+    text-align: center;
+  }
 
+  .sizes h3 {
+    margin: 10px auto;
+  }
 
+  .size-list {
+    justify-content: center;
+  }
 
-
-
-
+  .size {
+    margin-right: 6.5px;
+  }
+}

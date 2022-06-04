@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { data } from '../data/data';
 
  const Filters = React.memo(function Filters ({filterItem, setSneakers}) {
-  const [active, setActive] = useState(null);
+  const [active] = useState(null);
 
-  
+
      return (
        <div className="tabs_controller">
          <div className="container_centered">
@@ -47,14 +47,5 @@ import { data } from '../data/data';
     
     })
     
-     export const StoreHeader = ({ customer, customerChange }) => {
-      return (
-        <>
-          <Filters
-            customerType={customer}
-            typeSneakers={customerChange}
-          />
-        </>
-      );
-    };
+
 export default Filters

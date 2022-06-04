@@ -4,22 +4,20 @@ import Main from "./pages/Main";
 import NavBar from "./pages/NavBar";
 import Cart from "./pages/Cart";
 import FavoriteBlock from "./pages/FavoriteBlock";
-import Filters from "./pages/Filters";
+import PostPage from "./pages/PostPage";
 function App() {
 
   return (
 
 
-<div className="">
+<div>
 <NavBar/>
-
   <Routes>
   <Route  path="/" element={<Main/>}></Route>
   <Route  path="/home" element={<Home/>}></Route>
+  <Route path='/sneakers/:id' element={<PostPage/>}></Route>
   <Route  path="/Cart" element={<Cart/>}></Route>
   <Route  path="/FavoriteBlock" element={<FavoriteBlock/>}></Route>
-  <Route  path="/filter" element={<Filters/>}></Route>
-
   </Routes>
 
 </div>
