@@ -33,23 +33,49 @@
     .grid_view {
       grid-template-columns: repeat(3, 1fr);
     }
+    .card_meta .icons{
+      width: 30px;
+      height: 30px;
+  }
   }
   
   @media screen and (max-width:767px) {
     .grid_view {
       grid-template-columns: repeat(2, 1fr);
     }
+    
   }
   
   @media screen and (max-width:480px) {
     .grid_view {
       grid-template-columns: 1fr;
     }
+    .products_container {
+  width: 120%;
+    }
+    .card_meta .icons{
+      width: 30px;
+      height: 30px;
+  }
+  }
+
+  @media screen and (max-width:280px) {
+    .grid_view {
+      grid-template-columns: 1fr;
+    }
+    .products_container {
+  width: 170%;
+    }
+    .card_meta .icons{
+      width: 30px;
+      height: 30px;
+  }
   }
   
   .product_card {
     padding: 1rem 0;
     cursor: pointer;
+    width: 100%;
   }
   
   .card_image {
@@ -63,6 +89,7 @@
   @media screen and (max-width:480px) {
     .card_image {
       height: 220px;
+      
     }
   }
   

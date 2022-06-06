@@ -15,7 +15,7 @@ function App() {
   <Routes>
   <Route  path="/" element={<Main/>}></Route>
   <Route  path="/home" element={<Home/>}></Route>
-  <Route path='/sneakers/:id' element={<PostPage/>}></Route>
+  <Route path='/sneakers/:productId' element={<PostPage/>}></Route>
   <Route  path="/Cart" element={<Cart/>}></Route>
   <Route  path="/FavoriteBlock" element={<FavoriteBlock/>}></Route>
   </Routes>

@@ -3,8 +3,12 @@ import React from 'react'
 function Cart() {
   return (
       
-    <div>Cart</div>
-  )
+
+
+
+
+<h1>hey</h1>
+    )
 }
 
 export default Cart

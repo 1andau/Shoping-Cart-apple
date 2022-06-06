@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Sizes = ({setSize,selectedSizes }) => {
-    const sizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
+    const sizes = ['36', '37', '38', '39', '40', '41', '42'];
   return (
     <div className="sizes">
       <h3>Sizes</h3>
