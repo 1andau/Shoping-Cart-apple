@@ -1,21 +1,18 @@
  import React from 'react'
 import Raiting from '../pages/assets/raiting.svg'; 
-import nike from '../pages/assets/sneakers.png'
 import { useParams } from 'react-router-dom';
 import { data } from '../data/data';
-import Sizes from '../filters/Sizes';
-
-
-const PostPage = ({}) => {
+const PostPage = () => {
+  
   const {productId} = useParams()
   const thisProduct = data.find(prod => prod.id === productId)
-  
+ 
 
    return (
 
-     <div className="view_wrapper" >
+     <div className="view_wrapper" id={thisProduct.id} >
        <div className="view_background">
-       <img src={thisProduct.imageUrl} alt="sneakers"  width={800}/>
+       <img className='sneakers_image' src={thisProduct.imageUrl} alt="sneakers"  />
        </div>
 
        <div className="view_foreground">
@@ -25,7 +22,6 @@ const PostPage = ({}) => {
            <li>home</li>
                <li>collection</li>
                <li>{thisProduct.category}</li>
-               <li>{thisProduct.customerType}</li>
            </ul>
 
                   {/* серийник */}
@@ -37,25 +33,21 @@ const PostPage = ({}) => {
 </div>
 <div className="details_more">
 
-  <div className="colors">
-  colors
-  </div>
 
   <div className="ratings_revieww">
 <div className="r_count">
-  ratings// 77 Reviews
+ 77 Reviews
 </div>
 <div className="stars">
 <img src={Raiting} alt="" />
 </div>
   </div>
 </div>
-<div className="price_big">
-<h1>10000$</h1>
-  </div>
+
 
   <div className="details_actions">
-<span className='action_buy'>buy in one click</span>
+<span className='action_buy'>buy in one click  $  
+ </span>
 
 
  

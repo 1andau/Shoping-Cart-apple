@@ -1,5 +1,5 @@
 import React from 'react';
-const StoreHeader = ({}) => {
+const StoreHeader = () => {
   const footwareTypes = [
     { id: 1, title: 'Loafers',active: false},
     { id: 2, title: 'Sneakers',active: true },

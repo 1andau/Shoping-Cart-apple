@@ -385,7 +385,9 @@
   
     .view_background {
       position: relative;
-      height: 360px;
+      height: 460px;
+top: -300px;
+
     }
   
     .view_foreground {
@@ -437,6 +439,7 @@
     .cover {
       margin-left: -150px;
     }
+  
   }
   
   @media screen and (max-width:600px) {
@@ -480,6 +483,61 @@
       display: none;
     }
   
-  
-  
   }
+
+.sneakers_image{
+  max-width: 100%;
+}
+  @media screen and (max-width:1300px) {
+    .sneakers_image {
+      position: relative;
+     max-width: 50%;
+     top: -100px;
+     }
+   }
+  @media screen and (max-width:1200px) {
+    .sneakers_image {
+      position: relative;
+     max-width: 50%;
+     top: -100px;
+     }
+   }
+
+   @media screen and (max-width:820px) {
+    .sneakers_image {
+      position: relative;
+     max-width: 100%;
+     top: 20px;
+     }
+   }
+   @media screen and (max-width:920px) {
+    .sneakers_image {
+      position: relative;
+     max-width: 100%;
+     top: 10px;
+     }
+   }
+   @media screen and (max-width:540px) {
+    .sneakers_image {
+      position: relative;
+     max-width: 100%;
+     top: 140px;
+     }
+   }
+  @media screen and (max-width:480px) {
+   .sneakers_image {
+     position: relative;
+     top: 200px;
+    max-width: 100%;
+    }
+
+  }
+  @media screen and (max-width:280px) {
+    .sneakers_image {
+      position: relative;
+      top: 200px;
+     max-width: 100%;
+     padding: 0;
+     }
+ 
+   }
