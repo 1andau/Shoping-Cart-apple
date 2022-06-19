@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatchCart } from './context/FavContext';
 
-
 const SneakersBlock = ({ product, liked = false,id }) => {
   const navigate = useNavigate();
   
   const [like, setLike] = useState(liked); 
   const dispatch = useDispatchCart();
 
-  function showProductDetails(id) {
+
+ function showProductDetails(id) {
     navigate(`/products/${product.id}`);
   }
 
@@ -20,9 +20,6 @@ const SneakersBlock = ({ product, liked = false,id }) => {
     setLike(!like) 
     dispatch({ type: "ADD", item });
   };
-
-  console.log(addToCart);
-
 
 
 
@@ -32,10 +29,12 @@ const SneakersBlock = ({ product, liked = false,id }) => {
      <div className="" onClick={() => showProductDetails(product)}>
        <div className="card_image">
          <img src={product.imageUrl} />
+
        </div>
 
        <div className="card_status">
-         {product.status === 2 && <span className="card_badge">NEW</span>}
+         {product.status === 2 && <span className="card_badge">NEW</span>}         <span>🌟{product.rating}</span>
+
        </div>
 
        <div className="card_content">

@@ -2,11 +2,11 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import cart from '../pages/assets/cart.svg';
 import redHeart from '../pages/assets/redHeart.svg';
-// import { useCart } from './context/FavContext';
+import { useCart } from './context/FavContext';
 function NavBar() {
   const navigate = useNavigate();
 
-  // const items = useCart();
+  const items = useCart();
 
   return (
     <div>
@@ -50,7 +50,7 @@ function NavBar() {
                   height="30px"
                   alt=""
                 />
-                {/* ({items.length}) */}
+                ({items.length})
               </ul>
             </div>
           </nav>

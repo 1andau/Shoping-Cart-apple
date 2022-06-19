@@ -3,43 +3,44 @@ import close from '../pages/assets/close.svg';
 import { useDispatchCart, useCart } from './context/FavContext';
 
  const FavoriteItems = ({product, index, handleRemove}) => {
-   
   return (
-    <div className="item">
+<div className="container">
+<div className="item">
 
-      <div className="item_wrapper"> 
-         <div className="item_remove"> 
-           <button type="button"
-           onClick={() => handleRemove(index)}
-           >
-            <img className="material-icons" src={close} alt="" />
-          </button> 
-         </div> 
+<div className="item_wrapper"> 
+   <div className="item_remove"> 
+     <button type="button"
+     onClick={() => handleRemove(index)}
+     >
+      <img className="material-icons" src={close} alt="" />
+    </button> 
+   </div> 
 
-         <div className="item_image">
-          <img src={product.imageUrl} alt="images" />
-        </div> 
+   <div className="item_image">
+    <img src={product.imageUrl} alt="images" />
+  </div> 
 
-         <div className="item_details">
-          <h3>name</h3>
-          <div className="item_meta">customerType category</div>
-        </div> 
+   <div className="item_details">
+    <h3>{product.name}</h3>
+    <div className="item_meta">
+<h3>{product.customerType} </h3>
+<h2>{product.category}</h2>
+      </div>
+  </div> 
 
-         <div className="item_price">
-          {product.price.toLocaleString('en', {
-            style: 'currency',
-            currency: 'USD',
-          })}
-        </div> 
-       </div> 
-    </div>
+   <div className="item_price">
+    {product.price.toLocaleString('en', {
+      style: 'currency',
+      currency: 'USD',
+    })}
+  </div> 
+ </div> 
+</div>
+</div>
   );
 };
 
-// export default FavoriteBlock; 
-
 export default function FavoriteBlock() {
-  // const { products, total } = useShop();
 
   const items = useCart();
   const dispatch = useDispatchCart();
@@ -52,13 +53,13 @@ export default function FavoriteBlock() {
   if (items.length === 0) {
     return (
       <main>
-        <p>Cart is empty</p>
+        <p className='empty'>In the 'favorite' section is empty</p>
       </main>
     );
   }
   return (
     <main>
-      <p>
+      <p className='price_fav'>
         Total price:{' '}
         {totalPrice.toLocaleString('en', {
           style: 'currency',

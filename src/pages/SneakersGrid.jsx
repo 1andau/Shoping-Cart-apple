@@ -1,42 +1,53 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Filters from '../filters/Filters';
 import {data} from '../data/data'; 
 import StoreHeader from '../filters/StoreHeader';
-import Sizes from '../filters/Sizes';
-import filterList from '../filters/FilterList';
 import SneakersBlock from './Sneakers';
+import AllFilters from '../filters/AllFilters';
 
-const SneakersGrid = ({customer}) => {    
+const SneakersGrid = () => {    
     const [sneakers, setSneakers] = useState(data);
-    const [selectedSizes, setSelectedSizes] = useState([]);
     const [loading, setLoading] = useState(true);
-  
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedRating, setSelectedRating] = useState(null);
+    const [resultsFound, setResultsFound] = useState(true);
+
+    const handleSelectCategory = (event, value) =>
+    !value ? null : setSelectedCategory(value);
+
+  const handleSelectRating = (event, value) =>
+    !value ? null : setSelectedRating(value);
+
+
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
           setLoading(false);
         }, 1000);
-      }, [customer]);
+      }, []);
       
-        const setSize = (size) => {
-          const newSizes = [...selectedSizes];
-          if (newSizes.includes(size)) {
-            const index = newSizes.indexOf(size);
-            newSizes.splice(index, 1);
-          } else {
-            newSizes.push(size);
-          }
-          setSelectedSizes(newSizes);
-          setSneakers(filterList(newSizes, 'size'));
-        };
 
-        const filterItem = (event) => {
-            const newItem = data.filter((newVal) => {
-              return newVal.typeSneakers === event;
-            });
-            setSneakers(newItem);
-          };
+const applyFilters = () => {
+let updatedList = data; 
 
+if (selectedRating) {
+  updatedList = updatedList.filter(
+    (item) => parseInt(item.size) === parseInt(selectedRating)
+  );
+}
+if (selectedCategory) {
+  updatedList = updatedList.filter(
+    (item) => item.typeSneakers === selectedCategory
+    
+  );
+}
+
+setSneakers(updatedList)
+    !updatedList.length ? setResultsFound(false) : setResultsFound(true);
+}
+
+useEffect(() => {
+  applyFilters();
+}, [selectedRating, selectedCategory])
 
 
   return (
@@ -44,10 +55,13 @@ const SneakersGrid = ({customer}) => {
 
       <StoreHeader />
 
-      <Filters filterItem={filterItem} setSneakers={setSneakers} />
-
+<AllFilters 
+      selectedCategory={selectedCategory}
+      selectCategory={handleSelectCategory}
+      selectedRating={selectedRating}
+      selectRating={handleSelectRating}
+/>
       <div>
-        <Sizes setSize={setSize} selectedSizes={selectedSizes} />
 
         <Fragment>
           {loading ? (
@@ -67,7 +81,7 @@ const SneakersGrid = ({customer}) => {
                   <div className="containerSneakers">
                     <div className="grid_view">
                       {sneakers.map(( product, i) => (
-                        <SneakersBlock key={i} product={product} />
+                        <SneakersBlock key={i} product={product}  />
                       ))}
                     </div>
                   </div>
@@ -77,7 +91,9 @@ const SneakersGrid = ({customer}) => {
           )}
         </Fragment>
       </div>
-    </div>  )
+    </div>  
+    
+    )
 }
 
 export default SneakersGrid
