@@ -5,6 +5,7 @@ body {
  background-size: cover;
  padding: 0;
 margin: 0;
+text-decoration: none;
 }
 
 .container {
@@ -13,34 +14,3 @@ margin: 0;
   padding: 40px 0;
 }
 
-// =============size
-.sizes {
-  margin: 5px;
-}
-.size-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 1000px) {
-
-  .sizes {
-    margin: 0;
-    text-align: center;
-  }
-
-  .sizes h3 {
-    margin: 10px auto;
-  }
-
-  .size-list {
-    justify-content: center;
-  }
-}
-
-
-@media screen and (max-width:280px) {
-  .sizes {
-    width: 170%;
-  }
-}

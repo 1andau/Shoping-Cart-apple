@@ -1,0 +1,118 @@
+
+.tabs_controller {
+  padding: 1rem 0;
+  border: 1px solid;
+  border-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.1), transparent) 1;
+  top: 25px;
+  z-index: 1;
+  background: var(--background);
+}
+
+.tab_menus {
+  list-style-type: none;
+  display: inline-flex;
+  margin: 0;
+  gap: 40px;
+  padding: 0;
+}
+
+.tab_menus li {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  opacity: 0.45;
+  transition: all .2s ease-in;
+  cursor: pointer;
+  letter-spacing: .1ch;
+}
+
+.tab_menus li:hover {
+  color: rgb(0, 0, 0);
+  opacity: 0.6;
+}
+
+.tab_menus .active_tab {
+  opacity: .8;
+  font-weight: 600;
+}
+.container_centered {
+  text-align: center;
+}
+
+
+
+.products_length {
+  font-size: 0.9rem;
+  color: hsl(0, 2%, 47%);
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+
+
+
+
+// ============= size =============
+.sizes {
+  margin: 35px;
+
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  button{
+    padding: 0.5em 1em;
+    border: 1px;
+    border-color: black;
+    border-radius: 0.5em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+      width: 38px;
+    height: 38px;
+    cursor: pointer;
+      border-radius: 50%;
+    
+    }
+     p{
+    font-size: 15px;
+   font-weight: bold;
+margin-left: -5px;
+  }
+  }
+  
+  .list button:hover{
+    background: rgb(137, 137, 137);
+  }
+  .list .activeSize:hover{
+    background: rgb(137, 137, 137);
+  }
+
+
+@media only screen and (max-width: 1000px) {
+
+  .sizes {
+    margin: 0;
+    text-align: center;
+  }
+
+  .sizes h3 {
+    margin: 10px auto;
+  }
+
+  .list {
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width:280px) {
+  .sizes {
+    width: 170%;
+  }
+}

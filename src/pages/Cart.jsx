@@ -1,12 +1,21 @@
 import React from 'react';
 import CartProduct from './CartProduct';
+import useShop from './context/FavContext';
+import { useCart } from './context/FavContext';
 
 const Cart = () =>  {
+  const items = useCart();
+
   return (
     <div className="page">
       <div className="wrapper">
         <div className="items">
-          <CartProduct />
+{items.map((cartItem) => (
+
+<CartProduct cartItem={cartItem} key={cartItem.id} />
+
+))}
+
         </div>
         <div className="checkout">
           <h2>Order Summary</h2>

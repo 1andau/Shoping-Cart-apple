@@ -5,16 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatchCart } from './context/FavContext';
 
-const SneakersBlock = ({ product, liked = false,id }) => {
+const SneakersBlock = ({  imageUrl, rating, status, price, id, name, product, liked = false, }) => {
   const navigate = useNavigate();
   
   const [like, setLike] = useState(liked); 
   const dispatch = useDispatchCart();
 
 
- function showProductDetails(id) {
-    navigate(`/products/${product.id}`);
-  }
+//  function showProductDetails(id) {
+  //   navigate(`/details/${id}${name}`);
+  // }
+
 
   const addToCart = (item) => {
     setLike(!like) 
@@ -23,24 +24,24 @@ const SneakersBlock = ({ product, liked = false,id }) => {
 
 
 
-
  return (
-   <div className="product_card" key={product._id}>
-     <div className="" onClick={() => showProductDetails(product)}>
+   <div className="product_card" key={id}>
+     <div className="" >
        <div className="card_image">
-         <img src={product.imageUrl} />
+         <img src={imageUrl} />
 
        </div>
 
        <div className="card_status">
-         {product.status === 2 && <span className="card_badge">NEW</span>}         <span>🌟{product.rating}</span>
+         {status === 2 && <span className="card_badge">NEW</span>}       
+           <span>🌟{rating}</span>
 
        </div>
 
        <div className="card_content">
          <div className="card_info">
-           <h3>{product.name}</h3>
-           <p>{product.price}$</p>
+           <h3>{name}</h3>
+           <p>{price}$</p>
          </div>
        </div>
      </div>

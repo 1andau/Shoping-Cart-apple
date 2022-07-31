@@ -7,8 +7,6 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
       return [...state, action.item];
-
-      
     case "REMOVE":
       const newArr = [...state];
       newArr.splice(action.index, 1);
@@ -17,8 +15,6 @@ const reducer = (state, action) => {
       throw new Error(`unknown action ${action.type}`);
   }
 };
-
-
 
 
 export const CartProvider = ({ children }) => {

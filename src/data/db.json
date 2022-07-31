@@ -1,0 +1,210 @@
+[
+    {
+
+        "id": "1",
+        "name": "r. Martens Jadon Polka Dot Black",
+        "status": 2,
+         "productCode": "CI9924-100",
+        "category": "martens",
+        "typeSneakers": "Men",
+        "price": 123,
+        "size": "36",
+        "rating":2 ,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/9a4/500_680_2/9a4dabb25633d50cced6bd12b985fe24.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    },
+    {
+
+        "id": "2",
+        "name": "Vans Sk8-Hi Black",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "vans",
+        "typeSneakers": "Women",
+        "price": 110,
+        "size": "36",
+        "rating": 2,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/af4/500_680_2/af46fc344419b6c7f77264dfb41f13de.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    } ,
+       {
+
+        "id": "3",
+        "name": "Vans UA Old Skool Port Royale/White",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "vans",
+        "typeSneakers": "3",
+        "price": 120,
+        "size": "37",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/cac/500_680_2/cacb05a75cedae3900404007320b31c0.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    } ,
+       {
+
+        "id": "4",
+        "name": "Converse Chuck Taylor Classic Hi Black",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "converse",
+        "typeSneakers": "4",
+        "price": 122,
+        "size": "37",
+        "rating": 1,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/ce9/500_680_2/ce972abf5e0062d38cfd3ad33fd84681.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    } ,
+       {
+
+        "id": "5",
+        "name": "Converse 1970s Hi Paint Splatter Black/Ash",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "converse",
+        "typeSneakers": "1",
+        "price": 133,
+        "size": "38",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/7e4/500_680_2/7e41faf45160111d0eb7b803e117de39.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    },
+        {
+
+        "id": "6",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "saucony",
+        "typeSneakers": "2",
+        "price": 123,
+        "size": "38",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/c30/500_680_2/c3031dd2e97c30a6b3dff7df75d25976.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    }  ,
+      {
+
+        "id": "7",
+        "name": "Saucony Shadow Original Vintage Black/White",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "saucony",
+        "typeSneakers": "3",
+        "price": 234,
+        "size": "39",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/fd3/500_680_2/fd394931bc0393d8684f7f222af353fd.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    },
+        {
+
+        "id": "8",
+        "name": "Vans Style 36 Decon SF Dark Aloha/Black",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "vans",
+        "typeSneakers": "4",
+        "price": 145,
+        "size": "39",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/3f3/500_680_2/3f328995d11f38f77634e3decd3db1e5.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    }  ,
+      {
+
+        "id": "9",
+        "name": "Fila Select Low Multi",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "fila",
+        "typeSneakers": "1",
+        "price": 124,
+        "size": "40",
+        "rating": 3,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/493/500_680_2/493604e66ed31b30c0792b6eb361b4e5.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    }  ,
+      {
+
+        "id": "10",
+        "name": "Fila Disruptor II Wedge Blk",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "fila",
+        "typeSneakers": "2",
+        "price": 123,
+        "size": "41",
+        "rating": 3,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/1b5/500_680_2/1b5e732abb2e2e704565882fb4b0fe19.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    } ,
+       {
+
+        "id": "11",
+        "name": "Dr. Martens 1460 Flames Emboss Polished Black Smooth",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "martens",
+        "typeSneakers": "2",
+        "price": 300,
+        "size": "41",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/8ec/500_680_2/8ec243b69c235e997c2dd7177996d6dc.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    } ,
+       {
+
+        "id": "12",
+        "status": 2,
+        "productCode": "CI9924-100",
+        "category": "martens",
+        "typeSneakers": "2",
+        "price": 120,
+        "size": "41",
+        "rating": 2,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/950/500_680_2/950df4d1f7b0d51eeefff953f31e817c.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    },
+        {
+
+        "id": "13",
+        "name": "Fila Venom Red/White",
+        "status": 5,
+        "productCode": "CI9924-100",
+        "category": "fila",
+        "typeSneakers": "5",
+        "price": 130,
+        "size": "41",
+        "rating": 5,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/5ae/500_680_2/5ae31889e544cdcf1dde4c3f3588bb94.jpeg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    }  ,
+      {
+
+        "id": "14",
+        "name": " Converse 1970s Hi Beat The World",
+        "status": 5,
+        "productCode": "CI9924-100",
+        "category": "converse",
+        "typeSneakers": 5,
+        "price": 140,
+        "size": "41",
+        "rating": 2,
+        "imageUrl": "https://fabstore.ru/upload/resize_cache/iblock/40e/500_680_2/40e6f5769fc2eaea4ac3d53241989a36.jpg",
+        "description": "The Air Jordan 1 Mid SE maintains the timeless appeal of the first AJ1, revamped with fresh colours to give it an updated profile. It has a lightweight Air-Sole unit and a mix of natural and synthetic materials that make up its classic look."
+
+    }  
+   ]
