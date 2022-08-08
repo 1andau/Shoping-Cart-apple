@@ -5,7 +5,6 @@ import Categories from '../filters/Categories';
 import styles from '../scss/components/Filters.module.scss';
 import Sizes from './Sizes';
 import axios from 'axios';
-
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -13,6 +12,9 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(0);
   const [sneakersSizes, setSneakersSizes] = useState(0);
+
+
+
 
   useEffect(() => {
     const category = categoryId > 0 ? `typeSneakers=${categoryId}` : '';
@@ -29,16 +31,12 @@ const Home = () => {
 console.log(categoryId);
 
 
-
-
-
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <div>
@@ -50,13 +48,13 @@ console.log(categoryId);
 
       <div>
         <Fragment>
-          {/* {loading ? (
+          {loading ? (
             <img
               src="https://career.alliedvision.com/persis/images_avt/gicccccphy.gif"
               alt="loader"
               className={styles.loader}
             />
-          ) : ( */}
+          ) : (
             <>
               <span className={styles.products_length}>{sneakers.length} Product(s) found.</span>
 
@@ -67,7 +65,7 @@ console.log(categoryId);
                   <div className="containerSneakers">
                     <div className="grid_view">
                       {sneakers.map((obj) => (
-                        <Link key={obj.id} to={`/details/${obj.id}` }>
+                        <Link className='links' key={obj.id} to={`/details/${obj.id}` }>
                         <SneakersBlock key={obj.id} {...obj} />
                        </Link>
                       ))}
@@ -76,7 +74,7 @@ console.log(categoryId);
                 </section>
               )}
             </>
-          {/* )} */}
+        )} 
         </Fragment>
       </div>
     </div>

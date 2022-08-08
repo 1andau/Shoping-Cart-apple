@@ -20,13 +20,7 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-  
-  @media screen and (max-width:600px) {
-    .containerSneakers {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
+
   
   .grid_view {
     display: grid;
@@ -34,18 +28,18 @@
     gap: 1rem 5rem;
     margin: 24px 0 84px;
     opacity: 0.9;
+    text-decoration: none;
   }
   
+  .links{
+    text-decoration: none;
+  }
 
   
   @media screen and (max-width:1199px) {
     .grid_view {
       grid-template-columns: repeat(3, 1fr);
     }
-    .card_meta .icons{
-      width: 30px;
-      height: 30px;
-  }
   }
   
   @media screen and (max-width:767px) {
@@ -60,44 +54,30 @@
       grid-template-columns: 1fr;
     }
     .products_container {
-  width: 120%;
+  width: 100%;
     }
-    .card_meta .icons{
-      width: 30px;
-      height: 30px;
-  }
   }
 
-  @media screen and (max-width:280px) {
-    .grid_view {
-      grid-template-columns: 1fr;
-    }
-    .products_container {
-  width: 170%;
-    }
-    .card_meta .icons{
-      width: 30px;
-      height: 30px;
-  }
-  }
   
   .product_card {
     padding: 1rem 0;
     cursor: pointer;
     width: 100%;
+    color: black;
   }
   
   .card_image {
-    height: 230px;
+    height: 290px;
     text-align: center;
     padding: 1rem 0 0;
+    max-width: 100%;
   }
   
 
   
   @media screen and (max-width:480px) {
     .card_image {
-      height: 220px;
+      height: 250px;
       
     }
   }

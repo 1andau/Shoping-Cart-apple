@@ -1,63 +1,72 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import cart from '../pages/assets/cart.svg';
-import redHeart from '../pages/assets/redHeart.svg';
-// import { useCart } from './context/FavContext';
-function NavBar() {
-  const navigate = useNavigate();
+import { useState } from 'react';
+import {Nav, NavMenu, Bar,NavbarContainer,MenuButton, NavItem  } from './Navbar.elements'
+import { Link } from 'react-router-dom';
 
-  // const items = useCart();
+function HamburgerButton() {
+const [click, setClick] = useState(false); 
+const [collectionClick, setCollectionClick] = useState(false); 
+const [cartClick, setCartClick] = useState(false); 
+const [favoritesClick, setFavoritesClick] = useState(false); 
+
+
+const handleCollectionClick = () => {
+  setCollectionClick(true); 
+  setCartClick(false); 
+  setFavoritesClick(false); 
+}
+const handleCartClick = () => {
+  setCartClick(true); 
+  setCollectionClick(false); 
+  setFavoritesClick(false); 
+}
+const handleFavoritesClick = () => {
+  setFavoritesClick(true); 
+  setCartClick(false); 
+  setCollectionClick(false); 
+}
+
+const handleClick = () => setClick(!click); 
+const closeMobileMenu = () => setClick(false); 
+
 
   return (
-    <div>
-      <header className="header_navbar">
-        <div className="container_navbar">
-          <nav className="navbar">
-            <h1>logo</h1>
-            <button type="button" className="burger" id="burger">
-              <span className="burger-line"></span>
-              <span className="burger-line"></span>
-              <span className="burger-line"></span>
-            </button>
-            <span className="overlay" id="overlay"></span>
-            <div className="menu" id="menu">
-              <ul className="menu-block">
-                <Link className="menu-item" to="/">
-                  {' '}
-                  HOME
-                </Link>
-                <Link className="menu-item" to="/home">
-                  {' '}
-                  COLLECTION{' '}
-                </Link>
-                <img
-                  onClick={() => {
-                    navigate('/Cart');
-                  }}
-                  className="ShopCart"
-                  src={cart}
-                  alt=""
-                  width="30px"
-                  height="30px"
-                />
-                <img
-                  onClick={() => {
-                    navigate('/FavoriteBlock');
-                  }}
-                  className="ShopCart"
-                  src={redHeart}
-                  width="30px"
-                  height="30px"
-                  alt=""
-                />
-                {/* ({items.length}) */}
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-    </div>
+    <Nav>
+      <NavbarContainer>
+        <h1 className="NavLogo">Logo</h1>
+
+        <MenuButton
+          onClick={handleClick}
+          className={click ? 'active' : ''}
+          aria-label="open main menu">
+          <Bar />
+          <Bar />
+          <Bar />
+        </MenuButton>
+
+        <NavMenu onClick={handleClick} click = {click}>
+    
+          <NavItem onClick={handleCollectionClick} collectionClick={collectionClick}>
+            <Link className="NavLinks" to="/Home" onClick={closeMobileMenu}>
+              Collection
+            </Link>
+          </NavItem>
+
+          <NavItem onClick = {handleCartClick} cartClick={cartClick}>
+            <Link className="NavLinks" to="/cart" onClick={closeMobileMenu}>
+              Cart 🛒
+            </Link>
+          </NavItem>
+
+          <NavItem onClick={handleFavoritesClick} favoritesClick={favoritesClick}>
+            <Link className="NavLinks" to="/FavoriteBlock" onClick={closeMobileMenu}>
+              Favorites ❤️
+            </Link>
+          </NavItem>
+        </NavMenu>
+      </NavbarContainer>
+    </Nav>
   );
 }
 
-export default NavBar;
+export default HamburgerButton;

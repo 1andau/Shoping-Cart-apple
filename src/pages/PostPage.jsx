@@ -1,12 +1,13 @@
  import React from 'react'
 import Raiting from '../pages/assets/raiting.svg'; 
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+
+
 const PostPage = () => {
 const {id} = useParams()
 const [details, setDetails] = useState(); 
-const navigate = useNavigate(); 
 
 useEffect(() => {
   async function fetchDetails() {
@@ -15,11 +16,10 @@ useEffect(() => {
       setDetails(data);
     } catch (error) {
       alert('Ошибка при получении!');
-      navigate('/');
     }
   }
   fetchDetails();
-}, []);
+}, [id]);
 
 if (!details) {
   return 'loading...';
