@@ -6,16 +6,13 @@ import styles from '../scss/components/Filters.module.scss';
 import Sizes from './Sizes';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Root from '../Root';
 
 const Home = () => {
   const [sneakers, setSneakers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(0);
   const [sneakersSizes, setSneakersSizes] = useState(0);
-
-
-
-
   useEffect(() => {
     const category = categoryId > 0 ? `typeSneakers=${categoryId}` : '';
     const sizes = sneakersSizes > 0 ? `size=${sneakersSizes}` : '';
@@ -40,8 +37,9 @@ console.log(categoryId);
 
   return (
     <div>
-      <StoreHeader />
 
+      <StoreHeader />
+<Root/>
       <Categories value={categoryId} onClickCategory={(i) => setCategoryId(i)} />
 
       <Sizes value={sneakersSizes} onClickSize={(i) => setSneakersSizes(i)} />

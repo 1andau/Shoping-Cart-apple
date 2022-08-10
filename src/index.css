@@ -13,11 +13,14 @@ code {
     monospace;
 }
 
-*{
-  margin: 0;
-  padding: 0;
+:root[data-theme="light"] {
+  --background-color: #fafafa;
 }
 
-button{
-  cursor: pointer;
+:root[data-theme="dark"] {
+  --background-color: #000000;
+}
+
+body {
+  background: var(--background-color);
 }

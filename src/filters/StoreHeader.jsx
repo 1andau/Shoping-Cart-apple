@@ -21,7 +21,6 @@ const StoreHeader = () => {
           </div>
         ))}
       </div>
-      <div className="fader"></div>
     </div>
   );
 };

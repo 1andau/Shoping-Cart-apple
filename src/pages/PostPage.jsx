@@ -3,7 +3,7 @@ import Raiting from '../pages/assets/raiting.svg';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Root from '../Root';
 
 const PostPage = () => {
 const {id} = useParams()
@@ -34,61 +34,37 @@ const onClickBy = () => {
 }
 
    return (
+    <div className="card_details" id={details.id} >
+  <div className="details">
+    <div className="details_content">
+      <div className="shoe_view">
+        <img className='details_image' src={details.imageUrl} />
+      
+      </div>
+    </div>
+    <div className="details_copy">
+      <h3>{details.raiting}</h3>
+    <span className='details_id'>{details.productCode}</span>
+      <p className="headline">{details.category}</p>
+      <h1>{details.name} </h1>
+      <p>{details.description}</p>
+      <div className="sum">{details.price} </div>
+      <div className="stars">
+         <div className="ratings_revieww">
+ <div className="r_count">
+  77 Reviews
+ </div>
+ <div className="stars">
+ <img src={Raiting} alt="" />
+ </div>   
+    </div>
+    </div>
 
-     <div className="view_wrapper" id={details.id} >
-       <div className="view_background">
-       <img className='sneakers_image' src={details.imageUrl} alt="sneakers"  />
-       </div>
-
-       <div className="view_foreground">
-         <div className="product_details">
-           <div className="details_meta">
-           <ul className='breadcrumb'>
-           <li>home</li>
-               <li>collection</li>
-               <li>{details.category}</li>
-           </ul>
-
-                  {/* серийник */}
-              <span className='details_id'>{details.productCode}</span>
-           </div>
-<div className="details_info">
-  <h2>{details.name}</h2>
-  <h3>{details.description}</h3>
-</div>
-<div className="details_more">
-
-
-  <div className="ratings_revieww">
-<div className="r_count">
- 77 Reviews
-</div>
-<div className="stars">
-<img src={Raiting} alt="" />
-</div>
+      <button className="buttonOne">Add to cart</button>
+<button className="buttonOne" onClick={onClickBy}>buy in one click{details.price}$</button>
+    </div>
   </div>
 </div>
-
-
-  <div className="details_actions">
-<span className='action_buy' onClick={onClickBy}>buy in one click  $  
- </span>
-
-
- 
-  <div className='action_buy'>
-                 
-                  <span className='buy_text'>Add to Cart</span>
-                   $ {details.price}
-                </div>
-
-
-
-                </div>
-
-         </div>
-       </div>
-     </div>
    );
  }
 

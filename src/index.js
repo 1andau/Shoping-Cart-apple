@@ -4,11 +4,15 @@ import './index.css';
 import './scss/app.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import ThemeProvider from './hooks/ThemeProvider'
+
 ReactDOM.render(
-  <Router>
+  <ThemeProvider>
+    <Router>
     <App />
-  </Router>,
-  document.getElementById('root')
+    </Router>
+  </ThemeProvider> , 
+    document.getElementById('root')
 );
 
 

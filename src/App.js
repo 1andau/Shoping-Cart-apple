@@ -4,8 +4,8 @@ import FavoriteBlock from "./pages/FavoriteBlock";
 import PostPage from "./pages/PostPage";
 import Home from './pages/Home';
 import  HamburgerButton from './pages/NavBar'; 
-function App() {
 
+function App() {
   //cart
   //разобраться с fetch (с favorites, чтобы подруб/отруб) и подключить mango db  (в конце)
   //поправить визуал в details
@@ -13,7 +13,8 @@ function App() {
   //добавить возможность менять цвет фона на ночной
 
   return (
-<div>  
+<div> 
+ 
   <HamburgerButton/>
 
   <Routes>

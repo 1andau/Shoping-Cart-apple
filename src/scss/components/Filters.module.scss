@@ -14,12 +14,13 @@
   margin: 0;
   gap: 40px;
   padding: 0;
+  border: 0.2px rgb(255, 0, 0);
 }
 
 .tab_menus li {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  color: #444;
+  color: rgb(119, 119, 119);
   opacity: 0.45;
   transition: all .2s ease-in;
   cursor: pointer;
@@ -43,6 +44,7 @@
 
 .products_length {
   font-size: 0.9rem;
+  font-weight: bold;
   color: hsl(0, 2%, 47%);
   display: flex;
   justify-content: center;

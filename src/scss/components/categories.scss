@@ -7,16 +7,7 @@
   cursor: pointer;
 }
 
-.fader {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 200px;
-  background: linear-gradient(90deg, rgba(247, 247, 247, 0), rgba(247, 247, 247, 0.65), rgba(247, 247, 247, 0.9), rgba(247, 247, 247, 1));
-  pointer-events: none;
-}
+
 
 .store_menu {
   display: flex;
@@ -88,10 +79,6 @@
     padding-right: 80px;
   }
 
-  .fader {
-    width: 100px;
-    background: linear-gradient(90deg, rgba(247, 247, 247, 0), rgba(247, 247, 247, 0.65), rgba(247, 247, 247, 0.95), rgba(247, 247, 247, 1));
-  }
 
   .store_menu_item {
     height: 64px;
