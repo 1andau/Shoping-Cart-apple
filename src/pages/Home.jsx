@@ -3,7 +3,6 @@ import StoreHeader from '../filters/StoreHeader';
 import SneakersBlock from './Sneakers';
 import Categories from '../filters/Categories';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import Sizes from '../filters/Sizes';
 
 const Home = () => {

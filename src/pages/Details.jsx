@@ -3,13 +3,12 @@ import Raiting from '../pages/assets/raiting.svg';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { addItem, selectCartItemById } from '../redux/cartSlise';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/cartSlise';
 
 const PostPage = () => {
   const { id } = useParams();
   const [details, setDetails] = useState();
-  const cartItem = useSelector(selectCartItemById(id));
   const dispatch = useDispatch();
 
   const onClickAdd = () => {
@@ -49,7 +48,7 @@ const PostPage = () => {
 
         <div className="details_content">
           <div className="shoe_view">
-            <img className="details_image" src={details.imageUrl} />
+            <img className="details_image" src={details.imageUrl} alt='' />
           </div>
         </div>
 

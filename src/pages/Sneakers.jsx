@@ -36,7 +36,7 @@ const anAddToCart = () => {
      <Link className='links' to={`/details/${id}`}> 
      <div className="" >
        <div className="card_image">
-         <img src={imageUrl} />
+         <img src={imageUrl} alt='' />
        </div>
 
        <div className="card_status">{status === 2 && <span className="card_badge">NEW</span>}</div>
