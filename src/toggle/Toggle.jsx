@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../scss/components/Toggle.module.scss';
-
+import styles from '../toggle/Toggle.module.scss';
 const Toggle = ({value, onChange}) => {
+  console.log(onChange);
   return (
     <div>
     <label className={styles.root} htmlFor="toggler">

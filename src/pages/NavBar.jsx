@@ -1,39 +1,36 @@
 import React from 'react';
 import { useState } from 'react';
 import {Nav, NavMenu, Bar,NavbarContainer,MenuButton, NavItem  } from './Navbar.elements'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectCart } from '../redux/cartSlise';
 
 function HamburgerButton() {
 const [click, setClick] = useState(false); 
 const [collectionClick, setCollectionClick] = useState(false); 
 const [cartClick, setCartClick] = useState(false); 
-const [favoritesClick, setFavoritesClick] = useState(false); 
-
+const {items} = useSelector(selectCart); 
+const totalCount = items.reduce((sum, item ) => sum + item.count, 0);
 
 const handleCollectionClick = () => {
   setCollectionClick(true); 
   setCartClick(false); 
-  setFavoritesClick(false); 
 }
 const handleCartClick = () => {
   setCartClick(true); 
   setCollectionClick(false); 
-  setFavoritesClick(false); 
 }
-const handleFavoritesClick = () => {
-  setFavoritesClick(true); 
-  setCartClick(false); 
-  setCollectionClick(false); 
-}
+
 
 const handleClick = () => setClick(!click); 
 const closeMobileMenu = () => setClick(false); 
 
+const navigate = useNavigate(); 
 
   return (
     <Nav>
       <NavbarContainer>
-        <h1 className="NavLogo">Logo</h1>
+        <h1 onClick={()=>navigate("/home")}className="NavLogo">Sneakers</h1>
 
         <MenuButton
           onClick={handleClick}
@@ -54,13 +51,7 @@ const closeMobileMenu = () => setClick(false);
 
           <NavItem onClick = {handleCartClick} cartClick={cartClick}>
             <Link className="NavLinks" to="/cart" onClick={closeMobileMenu}>
-              Cart 🛒
-            </Link>
-          </NavItem>
-
-          <NavItem onClick={handleFavoritesClick} favoritesClick={favoritesClick}>
-            <Link className="NavLinks" to="/FavoriteBlock" onClick={closeMobileMenu}>
-              Favorites ❤️
+              Cart 🛒 {totalCount}
             </Link>
           </NavItem>
         </NavMenu>

@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../scss/components/Filters.module.scss';
+import React from 'react';    
+import styles from './Sizes.module.scss';
 
 function Sizes({ onClickSize }) {
   const sizes = ['X', '37', '38', '39', '40', '41', '42'];

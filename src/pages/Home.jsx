@@ -2,11 +2,9 @@ import React, { useState, useEffect, Fragment } from 'react';
 import StoreHeader from '../filters/StoreHeader';
 import SneakersBlock from './Sneakers';
 import Categories from '../filters/Categories';
-import styles from '../scss/components/Filters.module.scss';
-import Sizes from './Sizes';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Root from '../Root';
+import Sizes from '../filters/Sizes';
 
 const Home = () => {
   const [sneakers, setSneakers] = useState([]);
@@ -25,7 +23,6 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, [categoryId, sneakersSizes]);
 
-console.log(categoryId);
 
 
   useEffect(() => {
@@ -39,7 +36,6 @@ console.log(categoryId);
     <div>
 
       <StoreHeader />
-<Root/>
       <Categories value={categoryId} onClickCategory={(i) => setCategoryId(i)} />
 
       <Sizes value={sneakersSizes} onClickSize={(i) => setSneakersSizes(i)} />
@@ -50,11 +46,11 @@ console.log(categoryId);
             <img
               src="https://career.alliedvision.com/persis/images_avt/gicccccphy.gif"
               alt="loader"
-              className={styles.loader}
+              className='loader'
             />
           ) : (
             <>
-              <span className={styles.products_length}>{sneakers.length} Product(s) found.</span>
+              <span className='products_length'>{sneakers.length} Product(s) found.</span>
 
               {sneakers.length === 0 ? (
                 <p className="text-center"></p>
@@ -63,9 +59,9 @@ console.log(categoryId);
                   <div className="containerSneakers">
                     <div className="grid_view">
                       {sneakers.map((obj) => (
-                        <Link className='links' key={obj.id} to={`/details/${obj.id}` }>
+                        // <Link className='links' key={obj.id} to={`/details/${obj.id}` }>   
                         <SneakersBlock key={obj.id} {...obj} />
-                       </Link>
+                      //  </Link>
                       ))}
                     </div>
                   </div>

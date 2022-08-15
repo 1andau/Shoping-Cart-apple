@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../scss/components/Filters.module.scss'
+import styles from '../filters/Categories.module.scss';
 
   function Categories({ onClickCategory}) {
     const categoryNames = ['All','Men','Women', 'Kids'];

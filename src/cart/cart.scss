@@ -4,13 +4,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--background);
     z-index: 1;
   }
-  
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 500px;
+
   }
   
   .empty {
@@ -27,6 +27,7 @@
     height: calc(100vh - 164px);
     overflow: auto;
     padding: 82px 50px;
+
   }
   
   .checkout {
@@ -46,6 +47,8 @@
     grid-template-columns: 50px 200px auto 100px 120px;
     gap: 20px;
     align-items: center;
+    background-color: rgb(255, 255, 255);
+
   }
   
   .item_image {
@@ -83,6 +86,7 @@
     border-radius: 30px;
     overflow: hidden;
     padding: 2px;
+    
   }
   
   @media screen and (max-width: 992px) {
@@ -179,8 +183,8 @@
   
   .item_price {
     justify-self: flex-end;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 17px;
   }
   
   .total_box {
@@ -228,48 +232,26 @@
     text-transform: uppercase;
     transition: background .2s ease-in;
     cursor: pointer;
+    background-color: #555;
   }
   
   .checkout_footer button:hover {
     background-color: #000;
   }
   
-  .toggle_btn {
-    position: fixed;
-    right: 50px;
-    bottom: 1rem;
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #eee;
-    align-items: center;
-    cursor: pointer;
+  .clearCart{
+    text-align: center;
     justify-content: center;
-    transition: background .2s ease-in;
-    border: none;
+    font-size: 20px;
+    color: rgb(173, 173, 173);
+    cursor: pointer;
   }
-  
-  .toggle_btn:hover {
-    background: #dcdada
-  }
-  
-  .toggle_btn:focus {
-    outline: none;
-  }
-  
-  .toggle_close {
-    transform: rotate(180deg);
-  }
-  
-  @media screen and (min-width:993px) {
-    .toggle_btn {
-      display: none;
-    }
-  }
-  
-  @media screen and (max-width:600px) {
-    .toggle_btn {
-      right: 20px;
-    }
+
+  .CartEmty{
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #777;
+    position: relative;
+    top: 400px;
   }

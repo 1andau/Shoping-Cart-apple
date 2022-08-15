@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from '../filters/StoreHeader.module.scss';
+
 const StoreHeader = () => {
 
 
@@ -10,11 +12,11 @@ const StoreHeader = () => {
   ];
 
   return (
-    <div className="store_menu_wrapper">
-      <div className="store_menu">
+    <div className={styles.styles}>
+      <div className={styles.store_menu}>
         {footwareTypes.map((type, index) => (
-          <div key={type.id} id={index.id} className="store_menu_item">
-            <h2 className={`${'store_menu_title'} ${type.active && 'store_menu_title_active'}`}
+          <div key={type.id} id={index.id} className={styles.store_menu_item}>
+            <h2 className={`${styles.store_menu_title} ${type.active && styles.store_menu_title_active}`}
             >
               
               {type.title}</h2>

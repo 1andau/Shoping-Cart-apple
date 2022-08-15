@@ -1,9 +1,9 @@
 import {  Routes, Route } from 'react-router-dom';
-import Cart from "./pages/Cart";
-import FavoriteBlock from "./pages/FavoriteBlock";
-import PostPage from "./pages/PostPage";
+import Cart from "./cart/Cart";
+import PostPage from "./pages/Details";
 import Home from './pages/Home';
 import  HamburgerButton from './pages/NavBar'; 
+import Root from './Root';
 
 function App() {
   //cart
@@ -16,12 +16,12 @@ function App() {
 <div> 
  
   <HamburgerButton/>
-
+  <br/>
+  <Root/>
   <Routes>
   <Route  path="*" element={<Home/>}></Route>
   <Route path="details/:id" element={<PostPage/>}></Route>
   <Route  path="/Cart" element={<Cart/>}></Route>
-  <Route  path="/FavoriteBlock" element={<FavoriteBlock/>}></Route>
   </Routes>
 
 
